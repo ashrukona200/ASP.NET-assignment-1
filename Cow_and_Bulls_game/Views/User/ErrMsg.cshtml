@@ -1,0 +1,9 @@
+﻿@model UserGameViewModel
+
+<!--Showing the error message and redirecting to the login page-->
+<div>
+<h2>@Model.errorMsg</h2>
+<a class="homepage" asp-area="" asp-controller="User" asp-action="Login">
+    <button class="btn btn-outline-primary">Go back to the Login Page</button>
+</a>
+</div>

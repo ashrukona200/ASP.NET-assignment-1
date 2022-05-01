@@ -1,0 +1,29 @@
+﻿@model User
+@using(Html.BeginForm("AddUser","User")){
+
+    <!--Creating the login page manually-->
+    <div>
+    <h1>SIGN UP</h1>
+
+    <!--Username-->
+    <div class="form-group">
+        @Html.LabelFor(m => m.UserId)
+        @Html.TextBoxFor(m => m.UserId,new{
+            @class="form-control"
+        })
+    </div>
+
+    <!--Password-->
+    <div class="form-group">
+        @Html.LabelFor(m => m.Password)
+        @Html.TextBoxFor(m => m.Password,new{
+            @class="form-control"
+        })
+    </div><br/>
+
+    <!--Submit button-->
+    <div class="form-group">
+    <button type="submit" class="btn btn-outline-primary">Sign up</button>
+    </div>
+    </div>   
+}

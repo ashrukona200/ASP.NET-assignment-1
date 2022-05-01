@@ -1,0 +1,28 @@
+﻿@model UserGameViewModel
+@using(Html.BeginForm("AuthenticateUser","User")){
+
+    <!--Creating the login page manually-->
+    <div>
+     <h1>LOG IN </h1>
+    <!--Username-->
+    <div class="form-group">
+        @Html.LabelFor(m => m.user.UserId)
+        @Html.TextBoxFor(m => m.user.UserId,new{
+            @class="form-control"
+        })
+    </div>
+
+    <!--Password-->
+    <div class="form-group">
+        @Html.LabelFor(m => m.user.Password)
+        @Html.TextBoxFor(m => m.user.Password,new{
+            @class="form-control"
+        })
+    </div><br/>
+
+    <!--Submit button-->
+    <div class="form-group">
+    <button type="submit" class="btn btn-outline-primary">Log in</button>
+    </div>
+    </div>
+}

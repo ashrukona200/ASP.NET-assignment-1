@@ -1,0 +1,18 @@
+﻿@model GameData
+@using(Html.BeginForm("GameResult","Game")){
+    <div>
+
+        <!--Here taking the user input of the guessing number-->
+        <div class="form-group">
+            @Html.LabelFor(m => m.number)
+            @Html.TextBoxFor(m => m.number,new{
+                @class="form-control"
+            })
+        </div><br/>
+
+        <!--This is for the submit button of guessed number-->
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-primary"><b>Submit</b></button>
+        </div>
+    </div>
+}

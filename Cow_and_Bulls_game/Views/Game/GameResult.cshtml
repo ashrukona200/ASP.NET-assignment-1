@@ -1,0 +1,20 @@
+﻿@model GameData
+
+<!--Showing the final result in the view-->
+@if (Model.isWon){
+    <h1>@Model.msg</h1>
+    <h3>Total Turns = @Model.turns</h3>
+}
+
+else{
+    <h1>@Model.msg</h1>
+    <h2> --SCORE BOARD-- </h2>
+    <h5>Total Bulls = @Model.bulls</h5>
+    <h5>Total Cows = @Model.cows</h5>
+    <h5>Total Turns = @Model.turns</h5><br/>
+    
+    <a class="homepage" asp-area="" asp-controller="Game" asp-action="GamePage">
+    <button class="btn btn-outline-primary"><b>Try again</b></button>
+    </a>
+    
+}
